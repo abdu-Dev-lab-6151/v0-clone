@@ -1,4 +1,6 @@
 {
     "editor.formatOnSave": true,
-    "workbench.colorTheme": "Dark Chai"
+    "workbench.colorTheme": "Dark Chai",
+    "files.autoSave": "onFocusChange",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
