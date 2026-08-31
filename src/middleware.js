@@ -9,10 +9,8 @@ const isPublicRoute = createRouteMatcher([
 ]);
 
 export default clerkMiddleware(async (auth, req) => {
-  // 2. መንገዱ public ካልሆነ (ለምሳሌ /dashboard ከሆነ) ተጠቃሚው የግድ Login ማድረግ አለበት
   if (!isPublicRoute(req)) {
-    const authObj = await auth(); // authን await ማድረግ እንዳትረሳ
-    authObj.protect();
+    await auth.protect();
   }
 });
 
